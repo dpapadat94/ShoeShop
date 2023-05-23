@@ -127,6 +127,10 @@ p {
   padding: 0.5em;
   background-color: red;
 }
+.checkout-wrap {
+  margin-top: 2em;
+}
+
 .checkout-info {
   line-height: 2.5;
   text-align: center;
