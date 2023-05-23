@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/878c2e8804.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Shoe Shop</title>
+  </head>
+  <body>
+    <section id="header">
+      <div class="logo-left">
+        <a href="#" class="logo">The <span>Shoe</span> Shop </a>
+      </div>
+
+      <nav>
+        <ul class="navbar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#mens-section">Men</a></li>
+          <li><a href="#women-section">Women</a></li>
+          <li><a href="#sale-section">Spring Sale</a></li>
+
+          <li class="flex-cart">
+            <img
+              onclick="togglePopup()"
+              class="cart-logo"
+              src="img/cartwheels.png"
+              alt=""
+            />
+
+            <p class="cart-value" onclick="togglePopup()">0</p>
+          </li>
+          <a href="#" id="close"><img src="img/close.png" alt="" /></a>
+        </ul>
+      </nav>
+      <div class="mobile">
+        <img id="bar" class="cart-logo" src="img/more.png" alt="" />
+      </div>
+    </section>
+
+    <section class="hero">
+      <h4>The Spring Sale is Here</h4>
+      <h2>New Arrivals from Nike</h2>
+      <h2>Adidas and<span> More!</span></h2>
+
+      <button class="btn-hero sale-section">Shop the Sale Below</button>
+    </section>
+    <section class="feature section-p1">
+      <div class="feature-box">
+        <img class="feature-img" src="img/shipped.png" alt="" />
+        <p class="fc-title">Free Shipping</p>
+        <p class="fc-body">Free shipping on all orders over $50</p>
+      </div>
+      <div class="feature-box">
+        <img class="feature-img" src="img/return-box.png" alt="" />
+        <p class="fc-title">Return Policy</p>
+        <p class="fc-body">Return items within 60 days for a full refund</p>
+      </div>
+      <div class="feature-box">
+        <img class="feature-img" src="img/chat.png" alt="" />
+        <p class="fc-title">24/7 Support</p>
+        <p class="fc-body">Chat with a customer service specialist 24/7</p>
+      </div>
+      <div class="feature-box">
+        <img class="feature-img" src="img/card.png" alt="" />
+        <p class="fc-title">Rewards Card</p>
+        <p class="fc-body">
+          Sign up for our rewards program to earn while you shop!
+        </p>
+      </div>
+      <div id="mens-section"></div>
+    </section>
+
+    <section class="product1 section-p1">
+      <h2>Mens Top Sellers</h2>
+      <p>2023 Mens Top Selling Sneakers</p>
+      <div class="pro-container">
+        <!-- insert from JavaScript -->
+      </div>
+      <div id="popup-1" class="popup">
+        <div class="overlay"></div>
+        <div class="modal-content">
+          <h2>Cart</h2>
+          <div class="cart-items"></div>
+          <hr />
+          <div class="subtotal">(0 items) :$0</div>
+          <div class="checkout">
+            <a class="checkout" href="checkout.html" target="_blank"
+              >proceed to checkout</a
+            >
+          </div>
+          <div class="modal-close" onclick="togglePopup()">&times;</div>
+        </div>
+      </div>
+    </section>
+    <section class="sm-banner section-p1">
+      <div class="banner-box">
+        <h4>Super Savings</h4>
+        <h2>Buy 1 Get 1 Free on Select Nike Sneakers</h2>
+        <span>Your favorite sportswear brand now on sale!</span>
+      </div>
+      <div class="banner-box2">
+        <h4>In Stock Alert</h4>
+        <h2>Jordan 1 High Tops are Back in Stock</h2>
+        <span>Your favorite sportswear brand now on sale!</span>
+        <button class="btn-mensTop">In Mens Top Sellers</button>
+      </div>
+    </section>
+
+    <section class="banner3">
+      <div class="banner-box">
+        <h2>Rewards Members Earn</h2>
+        <h3>3x rewards points through May</h3>
+      </div>
+      <div class="banner-box banner-box2">
+        <h2>Buy 1 Get 1 Free on All</h2>
+        <h3>Winter Collection</h3>
+      </div>
+      <div class="banner-box banner-box3">
+        <h2>New Store Locations</h2>
+        <h3 id="women-section">Opening Soon</h3>
+      </div>
+    </section>
+    <section class="product1 section-p1">
+      <h2>Womens Top Sellers</h2>
+      <p>2023 Womens Top Selling Sneakers</p>
+      <div id="product-w" class="pro-container">
+        <!-- insert from JavaScript -->
+      </div>
+    </section>
+
+    <section class="banner section-m1">
+      <h4>Spring Sale</h4>
+      <h2>Up to <span> 50%</span> off now through May</h2>
+      <button class="btn-banner">Shop Below!</button>
+      <div id="sale-section"></div>
+    </section>
+
+    <section class="product1 section-p1">
+      <h2>Spring Sale Items</h2>
+      <p>Shop Our Best Deals</p>
+      <div id="product-s" class="pro-container">
+        <!-- insert from JavaScript -->
+      </div>
+    </section>
+    <section class="newsletter section-p1 section-m1">
+      <div class="newstext">
+        <h4>Sign up for newsletter.</h4>
+        <p>
+          Get email updats of our latest offers and
+          <span>rewards benefits!</span>
+        </p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="email adress" name="" id="" />
+        <button>sign up!</button>
+      </div>
+    </section>
+
+    <footer class="section-p1">
+      <div class="col">
+        <div class="logo-left">
+          <a href="#" class="logo">The <span>Shoe</span> Shop </a>
+        </div>
+        <h4>Contact Us</h4>
+        <p><strong>Phone:</strong> 555-555-5555</p>
+        <p><strong>Email:</strong> support@apperalShop.com</p>
+        <p><strong>Mailing:</strong> 123 Main street, USA</p>
+        <div class="follow">
+          <h4>connect on social</h4>
+          <img src="img/instagram.png" alt="" />
+          <img src="img/twitter-sign.png" alt="" />
+          <img src="img/facebook.png" alt="" />
+          <img src="img/linkedin-logo (1).png" alt="" />
+        </div>
+      </div>
+
+      <div class="col">
+        <h4>About</h4>
+        <a href="">Store Locator</a>
+        <a href="">Our Story</a>
+        <a href="">Careers</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Terms of Service</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="">Log-in</a>
+        <a href="">Order Tracker</a>
+        <a href="">Live Chat</a>
+        <a href="">Manage Rewards</a>
+        <a href="">Log-out</a>
+      </div>
+      <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <img src="img/app-store.png" alt="" />
+          <img src="img/playstore.png" alt="" />
+        </div>
+        <p>Secure Payment Gateway</p>
+        <div class="payment-logos">
+          <img src="img/visa.png" alt="" />
+          <img src="img/apple-pay.png" alt="" />
+          <img src="img/paypal.png" alt="" />
+        </div>
+      </div>
+    </footer>
+    <script src="allproducts.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
